@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy — Offcut — Recrem Digital</title>
+    <meta
+      name="description"
+      content="Privacy policy for Offcut, a menu-bar clipboard history for Mac. Clipboard text stays on your Mac."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/site.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="wordmark" href="/">
+          <span class="wordmark-name">Recrem</span>
+          <span class="wordmark-meta">Digital</span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Open menu"
+        >
+          <span></span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Primary">
+          <a href="/#about">About</a>
+          <a href="/#products">Products</a>
+          <a href="/#approach">Approach</a>
+          <a href="/#contact">Contact</a>
+          <a class="nav-cta" href="mailto:admin@recremdigital.com.au">Get in touch</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <article class="policy">
+        <div class="wrap">
+          <header>
+            <p class="hero-kicker">Offcut for Mac</p>
+            <h1>Privacy Policy</h1>
+            <p class="policy-meta">Effective 23 October 2026.</p>
+          </header>
+
+          <div class="prose">
+            <p>
+              Offcut is a menu-bar clipboard history. This policy describes the
+              Mac App Store app (bundle identifier <code>com.offcutmac</code>),
+              published by Recrem Digital Pty Ltd.
+            </p>
+            <p>
+              Clipboard text stays on this Mac. Offcut does not send it to the
+              developer or to any other server. For Apple’s App Privacy
+              questionnaire, Offcut does not collect data.
+            </p>
+
+            <h2>What stays on your Mac</h2>
+            <p>
+              Offcut reads plain text from the macOS clipboard so it can show a
+              local history. That text is written only to
+              <code>history.json</code> inside the app’s sandbox container, at
+              Application Support/Offcut. On a Mac App Store install, that file
+              is:
+            </p>
+            <p>
+              <code>~/Library/Containers/com.offcutmac/Data/Library/Application Support/Offcut/history.json</code>
+            </p>
+            <ul>
+              <li>
+                Recent history keeps the newest 100 text copies, about 100KB of
+                text each.
+              </li>
+              <li>
+                Pins keep up to 100 copies, each with an optional group name you
+                choose. Pins stay until you unpin them.
+              </li>
+            </ul>
+            <p>
+              Images and files are ignored. Copies that a password manager marks
+              as concealed are ignored and are not stored.
+            </p>
+            <p>
+              Start at Login only registers Offcut as a macOS login item. It
+              does not send information about your Mac.
+            </p>
+
+            <h2>What Offcut does not do</h2>
+            <ul>
+              <li>No accounts, and no sign-in.</li>
+              <li>No analytics, advertising, or crash reports.</li>
+              <li>No iCloud or other sync. History is not uploaded.</li>
+              <li>
+                No sale or sharing of clipboard text, because it never leaves
+                your Mac.
+              </li>
+            </ul>
+
+            <h2>How long it is kept</h2>
+            <p>
+              Recent copies stay until newer copies replace them, or until you
+              choose Clear History. Clear History removes recent copies only.
+              Pins stay until you unpin them.
+            </p>
+            <p>
+              Deleting Offcut’s container data removes
+              <code>history.json</code>. You can do that from Finder, or by
+              removing the app’s data under
+              <code>~/Library/Containers/com.offcutmac</code>.
+            </p>
+
+            <h2>Children</h2>
+            <p>
+              Offcut is not directed at children under 13, and it does not
+              knowingly collect personal information from them.
+            </p>
+
+            <h2>Changes</h2>
+            <p>
+              If Offcut’s behavior changes in a way that affects this policy,
+              this page will be updated and the effective date above will
+              change.
+            </p>
+
+            <h2>Contact</h2>
+            <p>
+              Recrem Digital Pty Ltd<br />
+              <a href="mailto:support@recremdigital.com.au">support@recremdigital.com.au</a>
+            </p>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <p>© 2026 Recrem Digital Pty Ltd · Australia</p>
+        <p class="footer-links">
+          <a href="mailto:admin@recremdigital.com.au">admin@recremdigital.com.au</a>
+          <a href="mailto:support@recremdigital.com.au">support@recremdigital.com.au</a>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var header = document.querySelector(".site-header");
+        var toggle = document.querySelector(".nav-toggle");
+        var nav = document.getElementById("site-nav");
+        if (!header || !toggle || !nav) return;
+
+        function setOpen(open) {
+          header.classList.toggle("is-open", open);
+          toggle.setAttribute("aria-expanded", open ? "true" : "false");
+          toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+        }
+
+        toggle.addEventListener("click", function () {
+          setOpen(!header.classList.contains("is-open"));
+        });
+
+        nav.addEventListener("click", function (event) {
+          if (event.target.closest("a")) setOpen(false);
+        });
+      })();
+    </script>
+  </body>
+</html>
